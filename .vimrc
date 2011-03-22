@@ -11,7 +11,7 @@ set tabstop=4
 set smartindent
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set expandtab           " Tabs to spaces
 
 " Case insensitive search
 " Ignore the "ignorecase" when the search term contains a capital letter
@@ -47,4 +47,10 @@ let g:AutoComplPop_IgnoreCaseOption = 1
 let g:AutoComplPop_MappingDriven = 1 " The auto-popup is triggered by key mappings instead of CursorMovedI
                                      " event if non-zero is set. This is useful to avoid auto-popup by moving
                                      " cursor in Insert mode.
+
+" http://vim.wikia.com/wiki/Find_in_files_within_Vim
+" Find in files of the word under the cursor and open the quickfix window
+" containing the search results
+" <cword> gets the current word, ** = recursive, cw = open quickfix
+map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
