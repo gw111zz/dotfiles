@@ -1,3 +1,6 @@
+" To reload .vimrc in the currently running Vim
+" :source $MYVIMRC
+
 " Turn on line numbering. Turn it off with "set nonu" 
 set nu 
 
@@ -53,4 +56,14 @@ let g:AutoComplPop_MappingDriven = 1 " The auto-popup is triggered by key mappin
 " containing the search results
 " <cword> gets the current word, ** = recursive, cw = open quickfix
 map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
+" Show menu of completions when opening files with :e
+set wildmenu
+
+" Pathogen plugin manager
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+"NERDTree on and off
+nmap <silent> <F2> :NERDTreeToggle<CR>
 
