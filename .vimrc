@@ -15,6 +15,7 @@ set smartindent
 set softtabstop=4
 set shiftwidth=4
 set expandtab           " Tabs to spaces
+set shiftround          " Round off indents to be multiple of tabs
 
 " Case insensitive search
 " Ignore the "ignorecase" when the search term contains a capital letter
@@ -29,6 +30,12 @@ set incsearch
 
 " Wrap text instead of being on one line
 set lbr
+
+" Move between splits using C-J and C-K and automatically
+" maximize the split.
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+set wmh=0 " Set max window height to 1 so that more windows can be stacked
 
 " See a bit of context around the cursor
 set scrolloff=2
