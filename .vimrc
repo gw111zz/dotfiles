@@ -48,6 +48,10 @@ colorscheme navajo-night
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" Change directory to the one the current file being edited is in using 
+" Might stop some plugins working
+set autochdir
+
 " Omnicompletion
 filetype plugin on
 set ofu=syntaxcomplete#Complete
