@@ -63,13 +63,6 @@ set autochdir
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
-" Autocomplpop plugin options
-" NOTE: one of other plugins breaks this
-"let g:AutoComplPop_IgnoreCaseOption = 1
-"let g:AutoComplPop_MappingDriven = 1 " The auto-popup is triggered by key mappings instead of CursorMovedI
-                                     " event if non-zero is set. This is useful to avoid auto-popup by moving
-                                     " cursor in Insert mode.
-
 " Show menu of completions when opening files with :e
 set wildmenu
 
