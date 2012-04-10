@@ -40,9 +40,16 @@ set wmh=0 " Set max window height to 1 so that more windows can be stacked
 " See a bit of context around the cursor
 set scrolloff=2
 
+" Pathogen plugin manager
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 " Change colorscheme and fonts
 "set gfn=Monaco:h11:b:cANSI
-colorscheme navajo-night
+"colorscheme navajo-night
+" Solarized
+set background=dark
+colorscheme solarized
 
 " Directories for swap files
 set backupdir=~/.vim/backup
@@ -57,23 +64,14 @@ filetype plugin on
 set ofu=syntaxcomplete#Complete
 
 " Autocomplpop plugin options
-let g:AutoComplPop_IgnoreCaseOption = 1
-let g:AutoComplPop_MappingDriven = 1 " The auto-popup is triggered by key mappings instead of CursorMovedI
+" NOTE: one of other plugins breaks this
+"let g:AutoComplPop_IgnoreCaseOption = 1
+"let g:AutoComplPop_MappingDriven = 1 " The auto-popup is triggered by key mappings instead of CursorMovedI
                                      " event if non-zero is set. This is useful to avoid auto-popup by moving
                                      " cursor in Insert mode.
 
-" http://vim.wikia.com/wiki/Find_in_files_within_Vim
-" Find in files of the word under the cursor and open the quickfix window
-" containing the search results
-" <cword> gets the current word, ** = recursive, cw = open quickfix
-map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-
 " Show menu of completions when opening files with :e
 set wildmenu
-
-" Pathogen plugin manager
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 "NERDTree on and off
 nmap <silent> <F2> :NERDTreeToggle<CR>
