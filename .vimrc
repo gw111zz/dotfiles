@@ -1,71 +1,75 @@
 " To reload .vimrc in the currently running Vim
 " :source $MYVIMRC
 
-" Turn on line numbering. Turn it off with "set nonu" 
-set nu 
 
-" Set syntax on
-syntax on
+"----------------------------------------
+" Pathogen plugin manager
+"----------------------------------------
 
-" Indent automatically depending on filetype
-filetype indent on
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+"----------------------------------------
+" General options
+"----------------------------------------
+
+set nu                      " Turn on line numbering. Turn it off with "set nonu" 
+syntax on                   " Set syntax on
+
+filetype indent on          " Indent automatically depending on filetype
 set autoindent
 set tabstop=4
 set smartindent
 set softtabstop=4
 set shiftwidth=4
-set expandtab           " Tabs to spaces
-set shiftround          " Round off indents to be multiple of tabs
+set expandtab               " Tabs to spaces
+set shiftround              " Round off indents to be multiple of tabs
+set lbr                     " Wrap text instead of being on one line
+set scrolloff=2             " See a bit of context around the cursor
 
-" Case insensitive search
-" Ignore the "ignorecase" when the search term contains a capital letter
-set ic
-set smartcase
-
-" Highlight search
-set hls
-
-" Incremental search
-set incsearch
-
-" Wrap text instead of being on one line
-set lbr
-
-" Move between splits using C-J and C-K and automatically
-" maximize the split.
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-set wmh=0 " Set max window height to 1 so that more windows can be stacked
-
-" See a bit of context around the cursor
-set scrolloff=2
-
-" Pathogen plugin manager
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
-" Change colorscheme and fonts
-"set gfn=Monaco:h11:b:cANSI
-"colorscheme navajo-night
-" Solarized
-set background=dark
-colorscheme solarized
-
-" Directories for swap files
-set backupdir=~/.vim/backup
+set backupdir=~/.vim/backup " Directories for swap files
 set directory=~/.vim/backup
 
-" Change directory to the one the current file being edited is in using 
-" Might stop some plugins working
-set autochdir
+set autochdir               " Change directory to the one the current file being edited is in using 
+                            " Might stop some plugins working
 
-" Omnicompletion
-filetype plugin on
+filetype plugin on          " Omnicompletion
 set ofu=syntaxcomplete#Complete
 
-" Show menu of completions when opening files with :e
-set wildmenu
+set wildmenu                " Show menu of completions when opening files with :e
 
-"NERDTree on and off
-nmap <silent> <F2> :NERDTreeToggle<CR>
+"----------------------------------------
+" Searching
+"----------------------------------------
+
+set ic                      " Case insensitive search
+set smartcase               " Ignore the "ignorecase" when the search term contains a capital letter
+
+set hls                     " Highlight search
+set incsearch               " Incremental search
+
+" ----------------------------------------
+" Split navigation
+" ----------------------------------------
+
+map <C-J> <C-W>j<C-W>_      " Move between splits using C-J and C-K and automatically
+map <C-K> <C-W>k<C-W>_      " maximize the split.
+set wmh=0                   " Set max window height to 1 so that more windows can be stacked
+map <F9>       :vsplit<CR> 
+map <F10>      :split<CR> 
+
+" ----------------------------------------
+" Color Scheme
+" ----------------------------------------
+
+" colorscheme navajo-night
+set background=dark         " Solarized option
+colorscheme solarized       " Solarized colorscheme
+
+" ----------------------------------------
+" Plugins
+" ----------------------------------------
+
+nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
+
 
