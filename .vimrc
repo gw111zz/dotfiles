@@ -72,4 +72,99 @@ colorscheme solarized       " Solarized colorscheme
 
 nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
 
+" ----------------------------------------
+" Perforce mappings
+" ----------------------------------------
 
+nnoremap @p4a :!p4 add %:e
+nnoremap @p4e :!p4 edit %:e
+nnoremap @p4d :!p4 diff %
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
