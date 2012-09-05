@@ -78,93 +78,10 @@ nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
 
 nnoremap @p4a :!p4 add %:e
 nnoremap @p4e :!p4 edit %:e
-nnoremap @p4d :!p4 diff %
 
+" ----------------------------------------
+"  Special file types
+" ----------------------------------------
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+autocmd FileType make setlocal noexpandtab  " Don't change tabs to spaces in Makefiles
+au BufNewFile,BufRead *.md set filetype=markdown
