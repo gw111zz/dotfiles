@@ -18,9 +18,9 @@ syntax on                   " Set syntax on
 
 filetype indent on          " Indent automatically depending on filetype
 set autoindent
-set tabstop=4
+set tabstop=2
 set smartindent
-set softtabstop=4
+set softtabstop=2
 set shiftwidth=4
 set expandtab               " Tabs to spaces
 set shiftround              " Round off indents to be multiple of tabs
