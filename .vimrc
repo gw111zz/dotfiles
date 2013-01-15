@@ -71,6 +71,7 @@ colorscheme solarized       " Solarized colorscheme
 " ----------------------------------------
 
 nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
+nnoremap <silent> <F3> :YRShow<CR>     " Show Yankring's contents
 
 " ----------------------------------------
 " Perforce mappings
