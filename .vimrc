@@ -59,6 +59,14 @@ map <F9>       :vsplit<CR>
 map <F10>      :split<CR> 
 
 " ----------------------------------------
+" Tab navigation
+" ----------------------------------------
+
+nnoremap <silent> <C-Right> :tabnext<CR>     " Next tab
+nnoremap <silent> <C-Left>  :tabprevious<CR> " Previous tab
+nnoremap <silent> <C-t>     :tabnew<CR>      " New tab
+
+" ----------------------------------------
 " Color Scheme
 " ----------------------------------------
 
