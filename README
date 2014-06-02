@@ -4,3 +4,7 @@ git clone the files to local drive
 Create symbolic links from ~/.vim to .vim and ~.vimrc to .vimrc
 using ln -s <destination> <name of link>
 
+To get the vim plugins:
+
+git submodule init
+git submodule update
