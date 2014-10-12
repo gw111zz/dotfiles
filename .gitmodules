@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/yank-ring"]
 	path = .vim/bundle/yank-ring
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule ".vim/bundle/vim-clojure-static"]
+	path = .vim/bundle/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static.git
