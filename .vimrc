@@ -81,6 +81,13 @@ colorscheme solarized       " Solarized colorscheme
 nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
 nnoremap <silent> <F3> :YRShow<CR>     " Show Yankring's contents
 
+                                         " TODO: check how well this works
+                                         " with solarized
+au VimEnter * RainbowParenthesesToggle   " Rainbow parentheses plugin enablers
+au Syntax * RainbowParenthesesLoadRound  " ()
+au Syntax * RainbowParenthesesLoadSquare " []
+au Syntax * RainbowParenthesesLoadBraces " {}
+
 " ----------------------------------------
 " Perforce mappings
 " ----------------------------------------
@@ -94,3 +101,4 @@ nnoremap @p4e :!p4 edit %:e
 
 autocmd FileType make setlocal noexpandtab  " Don't change tabs to spaces in Makefiles
 au BufNewFile,BufRead *.md set filetype=markdown
+autocmd FileType cpp,hpp,h setlocal tabstop=2
