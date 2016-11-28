@@ -18,14 +18,15 @@ syntax on                   " Set syntax on
 
 filetype indent on          " Indent automatically depending on filetype
 set autoindent
-set tabstop=2
+set ruler                   " Show column and line numbers on status bar
+set tabstop=4
 set smartindent
-set softtabstop=2
+set softtabstop=4
 set shiftwidth=4
 set expandtab               " Tabs to spaces
 set shiftround              " Round off indents to be multiple of tabs
 set lbr                     " Wrap text instead of being on one line
-set scrolloff=2             " See a bit of context around the cursor
+set scrolloff=3             " See a bit of context around the cursor
 
 set backupdir=~/.vim/backup " Directories for swap files
 set directory=~/.vim/backup
@@ -47,6 +48,11 @@ set smartcase               " Ignore the "ignorecase" when the search term conta
 
 set hls                     " Highlight search
 set incsearch               " Incremental search
+
+                            " Find word under the cursor in files and open the
+                            " quickfix list
+map <F4> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+                           
 
 " ----------------------------------------
 " Split navigation
@@ -78,11 +84,9 @@ colorscheme solarized       " Solarized colorscheme
 " Plugins
 " ----------------------------------------
 
-nmap <silent> <F2> :NERDTreeToggle<CR> " NERDTree on and off
-nnoremap <silent> <F3> :YRShow<CR>     " Show Yankring's contents
+nmap <silent> <F2> :NERDTreeToggle<CR>   " NERDTree on and off
+nnoremap <silent> <F3> :YRShow<CR>       " Show Yankring's contents
 
-                                         " TODO: check how well this works
-                                         " with solarized
 au VimEnter * RainbowParenthesesToggle   " Rainbow parentheses plugin enablers
 au Syntax * RainbowParenthesesLoadRound  " ()
 au Syntax * RainbowParenthesesLoadSquare " []
@@ -99,6 +103,6 @@ nnoremap @p4e :!p4 edit %:e
 "  Special file types
 " ----------------------------------------
 
-autocmd FileType make setlocal noexpandtab  " Don't change tabs to spaces in Makefiles
+autocmd FileType make setlocal noexpandtab                      " Don't change tabs to spaces in Makefiles
 au BufNewFile,BufRead *.md set filetype=markdown
-autocmd FileType cpp,hpp,h setlocal tabstop=2
+autocmd FileType cpp,hpp,h setlocal tabstop=2 softtabstop = 2
