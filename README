@@ -15,7 +15,7 @@ Adding a new plugin to Pathogen to this git repo:
 
 cd ~/.vim
 git submodule init
-git submodule add <git repot> bundle/<path to new plugin>
+git submodule add <git repo> bundle/<path to new plugin>
 git commit -m "<commit message>"
 git push
 
