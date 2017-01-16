@@ -108,3 +108,5 @@ au BufNewFile,BufRead *.md set filetype=markdown
 autocmd FileType cpp,hpp,h setlocal tabstop=2 softtabstop=2
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead Podfile.lock set filetype=ruby
+au BufNewFile,BufRead *.pbxproj set filetype=ruby               " No highlighter for XCode project files but it looks nice as Ruby!
+
