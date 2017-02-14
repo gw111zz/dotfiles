@@ -105,6 +105,7 @@ nnoremap @p4e :!p4 edit %:e
 
 autocmd FileType make setlocal noexpandtab                      " Don't change tabs to spaces in Makefiles
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.gradle set filetype=groovy
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead Podfile.lock set filetype=ruby
 au BufNewFile,BufRead *.pbxproj set filetype=ruby               " No highlighter for XCode project files but it looks nice as Ruby!
