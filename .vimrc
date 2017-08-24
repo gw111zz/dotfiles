@@ -19,9 +19,9 @@ syntax on                   " Set syntax on
 filetype indent on          " Indent automatically depending on filetype
 set autoindent
 set ruler                   " Show column and line numbers on status bar
-set tabstop=4
+set tabstop=4               " Number of visual spaces per tab 
 set smartindent
-set softtabstop=4
+set softtabstop=4           " Number of spaces per tab key press
 set shiftwidth=4
 set expandtab               " Tabs to spaces
 set shiftround              " Round off indents to be multiple of tabs
