@@ -76,7 +76,6 @@ nnoremap <silent> <C-t>     :tabnew<CR>      " New tab
 " Color Scheme
 " ----------------------------------------
 
-" colorscheme navajo-night
 set background=dark         " Solarized option
 colorscheme solarized       " Solarized colorscheme
 
@@ -109,6 +108,7 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead Podfile.lock set filetype=ruby
 au BufNewFile,BufRead *.pbxproj set filetype=ruby               " No highlighter for XCode project files but it looks nice as Ruby!
+au BufNewFile,BufRead *.plist set filetype=xml         
 au BufNewFile,BufRead CMakeLists.txt set filetype=cmake         
 autocmd FileType CMakeLists.txt setlocal shiftwidth=2 tabstop=2
 
