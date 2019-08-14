@@ -53,6 +53,7 @@ set incsearch               " Incremental search
                             " quickfix list
 map <F4> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
                            
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " ----------------------------------------
 " Split navigation
@@ -99,7 +100,7 @@ nnoremap @p4a :!p4 add %:e
 nnoremap @p4e :!p4 edit %:e
 
 " ----------------------------------------
-"  Special file types
+" Special file types
 " ----------------------------------------
 
 autocmd FileType make setlocal noexpandtab                      " Don't change tabs to spaces in Makefiles
@@ -111,6 +112,8 @@ au BufNewFile,BufRead *.pbxproj set filetype=ruby               " No highlighter
 au BufNewFile,BufRead *.plist set filetype=xml         
 au BufNewFile,BufRead CMakeLists.txt set filetype=cmake         
 autocmd FileType CMakeLists.txt setlocal shiftwidth=2 tabstop=2
+
+autocmd FileType c,cpp,java,py autocmd BufWritePre <buffer> %s/\s\+$//e " Automatically remove trailing whitespace on save
 
 " Use ":so %" to reload .vimrc without restarting
 
